@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>flexbox</title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
         .f-box {
             display: flex;
         }
@@ -299,227 +305,517 @@
         }
 
         /* align item  center end */
+
+        /* flex button design  */
+        .btn {
+            padding: 15px 45px;
+            font-weight: 700;
+            background-color: #F64D0B;
+            color: white;
+            margin-top: 12px;
+            cursor: pointer;
+
+        }
+
+        .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn:hover {
+            background-color: #3DBE29;
+            color: white;
+            transition: 0.5s;
+
+        }
+
+
+        /* Grid layout start  */
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+
+        }
+
+        .grid-item {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* grid container 2  */
+
+        .grid-container2 {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item2 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        /* grid container 3  */
+        .grid-container3 {
+            display: grid;
+            column-gap: 50px;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item3 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        /* grid container 4  */
+        .grid-container4 {
+            display: grid;
+            row-gap: 50px;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item4 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        /* grid container 5  */
+        .grid-container5 {
+            display: grid;
+            gap: 50px 50px;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item5 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        /* grid container 6  */
+        .grid-container6 {
+            display: grid;
+            gap: 0px;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item6 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        #grid-line {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        /* grid container 7  */
+        .grid-container7 {
+            display: grid;
+            gap: 0px;
+            grid-template-columns: auto auto auto;
+            padding: 50px;
+            background-color: #2196F3;
+        }
+
+        .grid-item7 {
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+        }
+
+        #grid-line-row {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- .flex-box>.box*5{box-$} -->
+    <section>
+        <div style=" position:fixed;  width:100% ; height:80px; background:#FFC300; text-align: center; padding: 10px;">
+            <button class="btn"> <a href="#flex-btn">Flex</a> </button> <button class="btn"> <a
+                    href="#grid-btn">Grid</a></button>
+        </div>
 
-    <h1 style="text-align:center; font-size:70px; color:green;">Flex box</h1>
-    <!-- flexbox display "flex" -->
-    <h1 style="text-align:center;">display flex container</h1>
-    <div class="f-box">
-        <div> display-flex</div>
-        <div> display-flex</div>
-        <div> display-flex</div>
+        <div id="flex-btn"></div>
+
+        <!-- .flex-box>.box*5{box-$} -->
+        <br> <br><br>
+        <br> <br><br>
+
+        <h1 style="text-align:center; font-size:70px; color:green;">Flex box</h1>
+        <!-- flexbox display "flex" -->
+        <h1 style="text-align:center;">display flex container</h1>
+        <div class="f-box">
+            <div> display-flex</div>
+            <div> display-flex</div>
+            <div> display-flex</div>
+        </div>
+        <!-- simple fex box end -->
+
+        <!-- justify content center -->
+        <div class="justi-box">
+            <div> display flex <br> - justify content center</div>
+            <div> display flex <br> - justify content center</div>
+            <div> display flex <br> - justify content center</div>
+        </div>
+        <!-- justify content center -->
+
+        <!-- justify content end -->
+        <div class="justi-end">
+            <div> display flex <br> - justify content end</div>
+            <div> display flex <br> - justify content end</div>
+            <div> display flex <br> - justify content end</div>
+        </div>
+        <!-- end -->
+
+        <hr>
+        <!-- justify-content-space-between -->
+        <h1 style="text-align: center;">justify-content-space-between</h1>
+        <div class="space">
+            <div> display flex <br> - justify content space-between</div>
+            <div> display flex <br> - justify content space-between</div>
+            <div> display flex <br> - justify content space-between</div>
+        </div>
+        <hr>
+        <!-- justify-content-space-between end -->
+
+        <!-- justify-content-space-around -->
+        <h1 style="text-align: center;">justify-content-space-around</h1>
+        <div class="around">
+            <div> display flex <br> - justify content space-around</div>
+            <div> display flex <br> - justify content space-around</div>
+            <div> display flex <br> - justify content space-around</div>
+        </div>
+        <hr>
+        <!-- justify-content-space-around end-->
+
+        <!-- justify-content-space-evently-->
+        <h1 style="text-align: center;">justify-content-space-evently</h1>
+        <div class="evently">
+            <div> display flex <br> - justify content space-evently</div>
+            <div> display flex <br> - justify content space-evently</div>
+            <div> display flex <br> - justify content space-evently</div>
+        </div>
+        <hr>
+        <!-- justify-content-space-evently end-->
+
+        <!-- flex direction -->
+        <h1 style="text-align:center;">flex direction</h1>
+        <div class="direction">
+            <div> display flex <br> - flex direction -- row</div>
+            <div> display flex <br> - flex direction -- row</div>
+            <div> display flex <br> - flex direction -- row</div>
+
+        </div>
+        <!-- flex direction row end -->
+        <hr>
+        <!-- flex direction column -->
+        <div class="direction-column">
+            <div> display flex <br> - flex direction -- column</div>
+            <div> display flex <br> - flex direction -- column</div>
+            <div> display flex <br> - flex direction -- column</div>
+        </div>
+        <!-- column end -->
+
+        <hr>
+        <!-- row reverse -->
+        <p>ulta dik theke gunbe row-reverse </p>
+        <div class="direction-rr">
+            <div> box-1 flex direction -column- reverse</div>
+            <div> box-2 flex direction -column- reverse</div>
+            <div> box-3 flex direction -column- reverse</div>
+
+        </div>
+        <!-- row reverse end -->
+
+        <!-- flex direction column reverse -->
+        <hr>
+
+        <p>ulta dik theke gunbe column-reverse </p>
+        <div class="direction-cr">
+            <div> box-1 flex direction -column- reverse</div>
+            <div> box-2 flex direction -column- reverse</div>
+            <div> box-3 flex direction -column- reverse</div>
+
+        </div>
+
+        <!-- coumn-reverse end -->
+
+        <hr>
+        <!-- flex wrap -->
+        <h1 style="text-align: center;">flex-wrap</h1>
+        <p>flex wrap er parthkko bujte hole browser screen choto bodo korle flex wrap ar no wrap er parthkko buja jabe r
+            defult vane flex-wrap --nowrap-- thake</p>
+        <h3>flex-wrap- wrap</h3>
+        <div class="fwrap">
+            <div>flex-wrap-wrap number-1</div>
+            <div>flex-wrap-wrap number-2</div>
+            <div>flex-wrap-wrap number-3</div>
+            <div>flex-wrap-wrap number-4</div>
+            <div>flex-wrap-wrap number-5</div>
+            <div>flex-wrap-wrap number-6</div>
+            <div>flex-wrap-wrap number-7</div>
+            <div>flex-wrap-wrap number-8</div>
+            <div>flex-wrap-wrap number-9</div>
+        </div>
+        <!-- end flex wrap -->
+        <hr>
+        <!-- wrap reverse -->
+        <h3>wrap reverse</h3>
+        <p>flex wrap-reverse mane ses sonka 9 mane last sonkha ta upore dekabe screen choto korle</p>
+        <div class="wraprr">
+            <div>flex-wrap-wrap number-1</div>
+            <div>flex-wrap-wrap number-2</div>
+            <div>flex-wrap-wrap number-3</div>
+            <div>flex-wrap-wrap number-4</div>
+            <div>flex-wrap-wrap number-5</div>
+            <div>flex-wrap-wrap number-6</div>
+            <div>flex-wrap-wrap number-7</div>
+            <div>flex-wrap-wrap number-8</div>
+            <div>flex-wrap-wrap number-9</div>
+        </div>
+        <!-- flex wrap reverse end -->
+
+        <!-- flex growg -->
+        <hr>
+        <h1 style="text-align: center;">flex grow</h1>
+        <p>flex growg dia ekti div er width heigh dia dite hoy r onnno div take id dia flex-grow -1 kore dite hobw ate
+            je
+            div ti grow kora seta nirdisto div tar width cada abki jaiga jude se thakbe </p>
+        <div class="flex-grow-container">
+            <div class="grow-box">box-1</div>
+            <div class="grow-box" id="box2">box-2 flow</div>
+        </div>
+        <!-- flex grow end -->
+
+        <!-- align item -->
+        <hr>
+        <h1 style="text-align:center">flex align items</h1>
+        <p>first container div ta nite hobe tar sudu height dia dite hobe border o dite paren <br> tarpor item div gular
+            background color border text-align center dia dite hobe </p>
+        <h3>align-item-stretch</h3>
+        <div class="container-item">
+            <div class="albox">box-1 stretch</div>
+            <div class="albox">box-2 stretch</div>
+            <div class="albox">box-3 stretch</div>
+            <div class="albox">box-4 stretch</div>
+            <div class="albox">box-5 stretch</div>
+            <div class="albox">box-6 stretch</div>
+            <div class="albox">box-7 stretch</div>
+            <div class="albox">box-8 stretch</div>
+            <div class="albox">box-9 stretch</div>
+        </div>
+        <!-- align item end -->
+
+        <!-- align item start -->
+        <hr>
+        <h3>align-item:flex-start</h3>
+        <div class="container-s">
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+            <div class="alb">box-flex-start</div>
+        </div>
+        <!-- align item end -->
+        <hr>
+
+        <!-- flex aling center -->
+        <h3>align-item:center</h3>
+        <div class="container-c">
+            <div class="albc">box-1 flex-center</div>
+            <div class="albc">box-2 flex-center</div>
+            <div class="albc">box-3 flex-center</div>
+            <div class="albc">box-4 flex-center</div>
+            <div class="albc">box-5 flex-center</div>
+            <div class="albc">box-6 flex-center</div>
+            <div class="albc">box-7 flex-center</div>
+            <div class="albc">box-8 flex-center</div>
+            <div class="albc">box-9 flex-center</div>
+        </div>
+        <!-- flex aling center end-->
+
+        <!-- align item end value -->
+        <h3>align-item:flex-end</h3>
+        <div class="container-e">
+            <div class="albe">box-1 flex-end</div>
+            <div class="albe">box-2 flex-end</div>
+            <div class="albe">box-3 flex-end</div>
+            <div class="albe">box-4 flex-end</div>
+            <div class="albe">box-5 flex-end</div>
+            <div class="albe">box-6 flex-end</div>
+            <div class="albe">box-7 flex-end</div>
+            <div class="albe">box-8 flex-end</div>
+            <div class="albe">box-9 flex-end</div>
+        </div>
+        <!-- align item end -->
+    </section>
+
+
+
+    <br> <br> <br> <br>
+    <!-- start Grid Layout  -->
+    <h1 id="grid-btn" style="text-align:center; font-size:70px; color:green;">Grid box</h1>
+    <h1 style="text-align:center;">display: grid</h1>
+
+    <br> <br>
+    <p>Gird div er vitor div ta ke grid item bola jete pare r grid item ke grid-template-columns:auto auto auto. ababe 3
+        bar dile 3 ta column hobe</p>
+    <div class="grid-container">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+        <div class="grid-item">Grid item 5</div>
+        <div class="grid-item">Grid item 6</div>
+        <div class="grid-item">Grid item 7</div>
+        <div class="grid-item">Grid item 8</div>
+        <div class="grid-item">Grid item 9</div>
+        <div class="grid-item">Grid item 10</div>
     </div>
-    <!-- simple fex box end -->
 
-    <!-- justify content center -->
-    <div class="justi-box">
-        <div> display flex <br> - justify content center</div>
-        <div> display flex <br> - justify content center</div>
-        <div> display flex <br> - justify content center</div>
-    </div>
-    <!-- justify content center -->
 
-    <!-- justify content end -->
-    <div class="justi-end">
-        <div> display flex <br> - justify content end</div>
-        <div> display flex <br> - justify content end</div>
-        <div> display flex <br> - justify content end</div>
-    </div>
-    <!-- end -->
-
-    <hr>
-    <!-- justify-content-space-between -->
-    <h1 style="text-align: center;">justify-content-space-between</h1>
-    <div class="space">
-        <div> display flex <br> - justify content space-between</div>
-        <div> display flex <br> - justify content space-between</div>
-        <div> display flex <br> - justify content space-between</div>
-    </div>
-    <hr>
-    <!-- justify-content-space-between end -->
-
-    <!-- justify-content-space-around -->
-    <h1 style="text-align: center;">justify-content-space-around</h1>
-    <div class="around">
-        <div> display flex <br> - justify content space-around</div>
-        <div> display flex <br> - justify content space-around</div>
-        <div> display flex <br> - justify content space-around</div>
-    </div>
-    <hr>
-    <!-- justify-content-space-around end-->
-
-    <!-- justify-content-space-evently-->
-    <h1 style="text-align: center;">justify-content-space-evently</h1>
-    <div class="evently">
-        <div> display flex <br> - justify content space-evently</div>
-        <div> display flex <br> - justify content space-evently</div>
-        <div> display flex <br> - justify content space-evently</div>
-    </div>
-    <hr>
-    <!-- justify-content-space-evently end-->
-
-    <!-- flex direction -->
-    <h1 style="text-align:center;">flex direction</h1>
-    <div class="direction">
-        <div> display flex <br> - flex direction -- row</div>
-        <div> display flex <br> - flex direction -- row</div>
-        <div> display flex <br> - flex direction -- row</div>
-
-    </div>
-    <!-- flex direction row end -->
-    <hr>
-    <!-- flex direction column -->
-    <div class="direction-column">
-        <div> display flex <br> - flex direction -- column</div>
-        <div> display flex <br> - flex direction -- column</div>
-        <div> display flex <br> - flex direction -- column</div>
-    </div>
-    <!-- column end -->
-
-    <hr>
-    <!-- row reverse -->
-    <p>ulta dik theke gunbe row-reverse </p>
-    <div class="direction-rr">
-        <div> box-1 flex direction -column- reverse</div>
-        <div> box-2 flex direction -column- reverse</div>
-        <div> box-3 flex direction -column- reverse</div>
-
-    </div>
-    <!-- row reverse end -->
-
-    <!-- flex direction column reverse -->
-    <hr>
-
-    <p>ulta dik theke gunbe column-reverse </p>
-    <div class="direction-cr">
-        <div> box-1 flex direction -column- reverse</div>
-        <div> box-2 flex direction -column- reverse</div>
-        <div> box-3 flex direction -column- reverse</div>
-
+    <!-- gird container 2  -->
+    <h3>display: inline-grid</h3>
+    <div class="grid-container2">
+        <div class="grid-item2">Grid item 1</div>
+        <div class="grid-item2">Grid item 2</div>
+        <div class="grid-item2">Grid item 3</div>
+        <div class="grid-item2">Grid item 4</div>
+        <div class="grid-item2">Grid item 5</div>
+        <div class="grid-item2">Grid item 6</div>
+        <div class="grid-item2">Grid item 7</div>
+        <div class="grid-item2">Grid item 8</div>
+        <div class="grid-item2">Grid item 9</div>
+        <div class="grid-item2">Grid item 10</div>
     </div>
 
-    <!-- coumn-reverse end -->
-
-    <hr>
-    <!-- flex wrap -->
-    <h1 style="text-align: center;">flex-wrap</h1>
-    <p>flex wrap er parthkko bujte hole browser screen choto bodo korle flex wrap ar no wrap er parthkko buja jabe r
-        defult vane flex-wrap --nowrap-- thake</p>
-    <h3>flex-wrap- wrap</h3>
-    <div class="fwrap">
-        <div>flex-wrap-wrap number-1</div>
-        <div>flex-wrap-wrap number-2</div>
-        <div>flex-wrap-wrap number-3</div>
-        <div>flex-wrap-wrap number-4</div>
-        <div>flex-wrap-wrap number-5</div>
-        <div>flex-wrap-wrap number-6</div>
-        <div>flex-wrap-wrap number-7</div>
-        <div>flex-wrap-wrap number-8</div>
-        <div>flex-wrap-wrap number-9</div>
+    <!-- gird container 3  -->
+    <h3>column-gap</h3>
+    <div class="grid-container3">
+        <div class="grid-item3">Grid item 1</div>
+        <div class="grid-item3">Grid item 2</div>
+        <div class="grid-item3">Grid item 3</div>
+        <div class="grid-item3">Grid item 4</div>
+        <div class="grid-item3">Grid item 5</div>
+        <div class="grid-item3">Grid item 6</div>
+        <div class="grid-item3">Grid item 7</div>
+        <div class="grid-item3">Grid item 8</div>
+        <div class="grid-item3">Grid item 9</div>
+        <div class="grid-item3">Grid item 10</div>
     </div>
-    <!-- end flex wrap -->
-    <hr>
-    <!-- wrap reverse -->
-    <h3>wrap reverse</h3>
-    <p>flex wrap-reverse mane ses sonka 9 mane last sonkha ta upore dekabe screen choto korle</p>
-    <div class="wraprr">
-        <div>flex-wrap-wrap number-1</div>
-        <div>flex-wrap-wrap number-2</div>
-        <div>flex-wrap-wrap number-3</div>
-        <div>flex-wrap-wrap number-4</div>
-        <div>flex-wrap-wrap number-5</div>
-        <div>flex-wrap-wrap number-6</div>
-        <div>flex-wrap-wrap number-7</div>
-        <div>flex-wrap-wrap number-8</div>
-        <div>flex-wrap-wrap number-9</div>
+
+    <!-- grid container 4  -->
+
+    <h3>Row-gap</h3>
+    <div class="grid-container4">
+        <div class="grid-item4">Grid item 1</div>
+        <div class="grid-item4">Grid item 2</div>
+        <div class="grid-item4">Grid item 3</div>
+        <div class="grid-item4">Grid item 4</div>
+        <div class="grid-item4">Grid item 5</div>
+        <div class="grid-item4">Grid item 6</div>
+        <div class="grid-item4">Grid item 7</div>
+        <div class="grid-item4">Grid item 8</div>
+        <div class="grid-item4">Grid item 9</div>
+        <div class="grid-item4">Grid item 10</div>
     </div>
-    <!-- flex wrap reverse end -->
 
-    <!-- flex growg -->
-    <hr>
-    <h1 style="text-align: center;">flex grow</h1>
-    <p>flex growg dia ekti div er width heigh dia dite hoy r onnno div take id dia flex-grow -1 kore dite hobw ate je
-        div ti grow kora seta nirdisto div tar width cada abki jaiga jude se thakbe </p>
-    <div class="flex-grow-container">
-        <div class="grow-box">box-1</div>
-        <div class="grow-box" id="box2">box-2 flow</div>
+    <!-- grid container 5  -->
+    <h3>Gap-gap</h3>
+    <div class="grid-container5">
+        <div class="grid-item5">Grid item 1</div>
+        <div class="grid-item5">Grid item 2</div>
+        <div class="grid-item5">Grid item 3</div>
+        <div class="grid-item5">Grid item 4</div>
+        <div class="grid-item5">Grid item 5</div>
+        <div class="grid-item5">Grid item 6</div>
+        <div class="grid-item5">Grid item 7</div>
+        <div class="grid-item5">Grid item 8</div>
+        <div class="grid-item5">Grid item 9</div>
+        <div class="grid-item5">Grid item 10</div>
     </div>
-    <!-- flex grow end -->
 
-    <!-- align item -->
-    <hr>
-    <h1 style="text-align:center">flex align items</h1>
-    <p>first container div ta nite hobe tar sudu height dia dite hobe border o dite paren <br> tarpor item div gular
-        background color border text-align center dia dite hobe </p>
-    <h3>align-item-stretch</h3>
-    <div class="container-item">
-        <div class="albox">box-1 stretch</div>
-        <div class="albox">box-2 stretch</div>
-        <div class="albox">box-3 stretch</div>
-        <div class="albox">box-4 stretch</div>
-        <div class="albox">box-5 stretch</div>
-        <div class="albox">box-6 stretch</div>
-        <div class="albox">box-7 stretch</div>
-        <div class="albox">box-8 stretch</div>
-        <div class="albox">box-9 stretch</div>
+    <!-- grid container 5  -->
+    <h3>Gride Line column</h3>
+    <div class="grid-container6">
+        <div id="grid-line" class="grid-item6">Grid item 1</div>
+        <div class="grid-item6">Grid item 2</div>
+        <div class="grid-item6">Grid item 3</div>
+        <div class="grid-item6">Grid item 4</div>
+        <div class="grid-item6">Grid item 5</div>
+        <div class="grid-item6">Grid item 6</div>
+        <div class="grid-item6">Grid item 7</div>
+        <div class="grid-item6">Grid item 8</div>
     </div>
-    <!-- align item end -->
 
-    <!-- align item start -->
-    <hr>
-    <h3>align-item:flex-start</h3>
-    <div class="container-s">
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
-        <div class="alb">box-flex-start</div>
+    <!-- container 7  -->
+    <h3>Gride Line row</h3>
+    <div class="grid-container7">
+        <div id="grid-line-row" class="grid-item7">Grid item 1</div>
+        <div class="grid-item7">Grid item 2</div>
+        <div class="grid-item7">Grid item 3</div>
+        <div class="grid-item7">Grid item 4</div>
+        <div class="grid-item7">Grid item 5</div>
+        <div class="grid-item7">Grid item 6</div>
+        <div class="grid-item7">Grid item 7</div>
+        <div class="grid-item7">Grid item 8</div>
     </div>
-    <!-- align item end -->
-    <hr>
 
-    <!-- flex aling center -->
-    <h3>align-item:center</h3>
-    <div class="container-c">
-        <div class="albc">box-1 flex-center</div>
-        <div class="albc">box-2 flex-center</div>
-        <div class="albc">box-3 flex-center</div>
-        <div class="albc">box-4 flex-center</div>
-        <div class="albc">box-5 flex-center</div>
-        <div class="albc">box-6 flex-center</div>
-        <div class="albc">box-7 flex-center</div>
-        <div class="albc">box-8 flex-center</div>
-        <div class="albc">box-9 flex-center</div>
+    <div>
+        <p>grid-template-columns: 200px 200px</p>
+        <p>dui line hobe</p>
+        <p>grid-template-columns: 200px 200px 200px</p>
+        <p>tin line hobe</p>
+        <p>grid-template-columns: 200px 200px 200px 200px</p>
+        <p> car line hobe. a cada o icce moto size aleomelo deya jabe</p>
+        <br>
+        <p>grid-template-columns: 200px 200px 200px auto</p>
+        <p>man auto dile jegula size a ase segula size nibe r baki jaiga auto ta nibe</p>
+        <br>
+        <p>grid-template-columns: repeat( column sonkha, size ) </p>
+        <p>grid-template-columns: repeat( 4, 200px ) </p>
+        <p>grid-template-columns: repeat( 4, 200px ) </p>
+        <p>grid-template-columns: repeat( 4, 1fr ) </p>
+        <p>fr = mane holo fraction</p>
+        <br>
+        <p>fr mane soman soman vag nibe </p>
+        <p>grid-template-columns: repeat( 4, 1fr ) 200px </p>
+        <p>ora ja ase taklo last er ta 200px nibe</p>
+        <p>grid-template-columns: repeat( 4, 1fr ) 2fr </p>
+        <p>last er ta duble jaiga nibe</p>
+        <span>flex er justify-content= center (sob property akane use kora jabe grid a)</span>
     </div>
-    <!-- flex aling center end-->
-
-    <!-- align item end value -->
-    <h3>align-item:flex-end</h3>
-    <div class="container-e">
-        <div class="albe">box-1 flex-end</div>
-        <div class="albe">box-2 flex-end</div>
-        <div class="albe">box-3 flex-end</div>
-        <div class="albe">box-4 flex-end</div>
-        <div class="albe">box-5 flex-end</div>
-        <div class="albe">box-6 flex-end</div>
-        <div class="albe">box-7 flex-end</div>
-        <div class="albe">box-8 flex-end</div>
-        <div class="albe">box-9 flex-end</div>
-    </div>
-    <!-- align item end -->
-
-
-
-
 
 
 
